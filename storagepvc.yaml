@@ -4,6 +4,10 @@ metadata:
   name: standard
 provisioner: kubernetes.io/aws-ebs
 parameters:
+  name: mongo-pvc
+  size: 1Gi
   type: gp2
 reclaimPolicy: Retain
 allowVolumeExpansion: true
+accessModes:
+  - ReadWriteOnce 
