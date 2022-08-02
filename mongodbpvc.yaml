@@ -3,9 +3,8 @@ kind: PersistentVolumeClaim
 metadata:
   name: mongo-pvc
 spec:
+  accessModes:
+    - ReadWriteOnce 
   resources:
     requests:
-      storage: 4Gi
-  accessModes:
-  - ReadWriteOnce
-  storageClassName: standard
+      storage: 1Gi
